@@ -6,6 +6,8 @@
 <h4>Kommandeure</h4>
 <ul>
     <li *ngFor="let commander of this.commanders">
-        {{commander}}
+        {{commander.name}}
+        <br>
+        <img *ngIf="commander.imageUri" src="{{commander.imageUri}}">
     </li>
 </ul>

@@ -47,9 +47,10 @@ export class DeckstatsApiService {
       const splitted = list.split('\n');
       for (const line of splitted) {
         if (line.indexOf(this.COMMANDER) !== -1) {
-            return line.split('#')[0];
+            return line.split('#')[0].replace(/[0-9]/g, '');
         }
       }
+      alert('Kein Commander in der Deckliste gefunden');
       return '';
   }
 
