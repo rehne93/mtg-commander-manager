@@ -20,6 +20,8 @@ import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { OverviewTabsComponent } from './overview-tabs/overview-tabs.component';
 import {MatFormFieldModule, MatInputModule, MatTabsModule} from '@angular/material';
 import { UserTabsComponent } from './user/user-tabs/user-tabs.component';
+import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -46,7 +48,9 @@ import { UserTabsComponent } from './user/user-tabs/user-tabs.component';
     NoopAnimationsModule,
     MatFormFieldModule,
     MatInputModule,
-    MatTabsModule
+    MatTabsModule,
+    FormsModule,
+    HttpClientModule
 
 
   ],

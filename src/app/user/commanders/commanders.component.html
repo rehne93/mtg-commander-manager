@@ -1,1 +1,11 @@
-<p>commanders works!</p>
+<mat-form-field>
+    <input matInput placeholder="Deckstats-URL" [(ngModel)]="deckstatsUrl">
+</mat-form-field>
+<button matButton (click)="fetch()">Fetch</button>
+<hr>
+<h4>Kommandeure</h4>
+<ul>
+    <li *ngFor="let commander of this.commanders">
+        {{commander}}
+    </li>
+</ul>
