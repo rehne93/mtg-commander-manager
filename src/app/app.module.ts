@@ -19,6 +19,7 @@ import { LifeComponent } from './game-overview/life/life.component';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { OverviewTabsComponent } from './overview-tabs/overview-tabs.component';
 import {MatFormFieldModule, MatInputModule, MatTabsModule} from '@angular/material';
+import { UserTabsComponent } from './user/user-tabs/user-tabs.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,8 @@ import {MatFormFieldModule, MatInputModule, MatTabsModule} from '@angular/materi
     InfoComponent,
     PlayersComponent,
     LifeComponent,
-    OverviewTabsComponent
+    OverviewTabsComponent,
+    UserTabsComponent
   ],
   imports: [
     BrowserModule,
