@@ -18,7 +18,7 @@ import { PlayersComponent } from './game-overview/players/players.component';
 import { LifeComponent } from './game-overview/life/life.component';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { OverviewTabsComponent } from './overview-tabs/overview-tabs.component';
-import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatFormFieldModule, MatInputModule, MatTabsModule} from '@angular/material';
 
 @NgModule({
   declarations: [
@@ -42,7 +42,10 @@ import {MatFormFieldModule} from '@angular/material/form-field';
     BrowserModule,
     AppRoutingModule,
     NoopAnimationsModule,
-    MatFormFieldModule
+    MatFormFieldModule,
+    MatInputModule,
+    MatTabsModule
+
 
   ],
   providers: [],
