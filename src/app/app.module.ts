@@ -15,7 +15,6 @@ import { SeasonComponent } from './user/season/season.component';
 import { CommandersComponent } from './user/commanders/commanders.component';
 import { InfoComponent } from './game-overview/info/info.component';
 import { PlayersComponent } from './game-overview/players/players.component';
-import { AchievmentsComponent } from './game-overview/achievments/achievments.component';
 import { LifeComponent } from './game-overview/life/life.component';
 
 @NgModule({
@@ -33,7 +32,6 @@ import { LifeComponent } from './game-overview/life/life.component';
     CommandersComponent,
     InfoComponent,
     PlayersComponent,
-    AchievmentsComponent,
     LifeComponent
   ],
   imports: [
