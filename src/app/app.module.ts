@@ -16,6 +16,8 @@ import { CommandersComponent } from './user/commanders/commanders.component';
 import { InfoComponent } from './game-overview/info/info.component';
 import { PlayersComponent } from './game-overview/players/players.component';
 import { LifeComponent } from './game-overview/life/life.component';
+import { NoopAnimationsModule } from '@angular/platform-browser/animations';
+import { OverviewTabsComponent } from './overview-tabs/overview-tabs.component';
 
 @NgModule({
   declarations: [
@@ -32,11 +34,13 @@ import { LifeComponent } from './game-overview/life/life.component';
     CommandersComponent,
     InfoComponent,
     PlayersComponent,
-    LifeComponent
+    LifeComponent,
+    OverviewTabsComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    NoopAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

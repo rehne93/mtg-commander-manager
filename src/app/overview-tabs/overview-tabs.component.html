@@ -1,0 +1,21 @@
+<nav mat-tab-nav-bar>
+    <!-- Tab zum Login
+  routerLink entspricht dem Pfad aus app.routing.modle
+  routerLinkActive gibt an, ob der Klick auf den Link navigiert
+  -->
+    <a mat-tab-link routerLink="/login" routerLinkActive="true">
+    Login
+  </a>
+    <a mat-tab-lnk routerLink="/gameOverview">Übersicht des Spieles</a>
+
+    <a mat-tab-link routerLink="/userView" routerLinkActive="true">
+    Benutzerübersicht
+  </a>
+
+    <a mat-tab-link routerLink="/seasonOverview">Saisonübersicht</a>
+
+    <a mat-tab-link routerLink="/createSeason">Neue Saison anlegen</a>
+
+    <a mat-tab-link routerLink="/editSeason">Saison bearbeiten</a>
+
+</nav>
