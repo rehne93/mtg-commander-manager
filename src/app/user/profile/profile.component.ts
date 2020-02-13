@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Player } from '../../../model/player';
+import { PlayerService } from '../../../services/player.service';
 
 @Component({
   selector: 'app-profile',
@@ -7,9 +9,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProfileComponent implements OnInit {
 
-  constructor() { }
+
+  player: Player;
+  constructor(public playerService: PlayerService) { }
 
   ngOnInit() {
+    this.fetchProfile();
   }
+
+
+  public fetchProfile() {
+    this.playerService.fetchCurrentPlayer(1);
+  }
+
 
 }

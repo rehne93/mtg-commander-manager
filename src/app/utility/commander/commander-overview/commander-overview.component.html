@@ -1,0 +1,5 @@
+<mat-list>
+    <mat-list-item *ngFor="let commander of this.commanders">
+        <app-single-commander-view [commander]="commander" [showImages]="this.showImages" [width]="this.width" [height]="this.height"></app-single-commander-view>
+    </mat-list-item>
+</mat-list>

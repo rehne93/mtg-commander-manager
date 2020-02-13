@@ -18,10 +18,13 @@ import { PlayersComponent } from './game-overview/players/players.component';
 import { LifeComponent } from './game-overview/life/life.component';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { OverviewTabsComponent } from './overview-tabs/overview-tabs.component';
-import {MatFormFieldModule, MatInputModule, MatTabsModule} from '@angular/material';
+import {MatFormFieldModule, MatInputModule, MatTabsModule, MatListModule} from '@angular/material';
 import { UserTabsComponent } from './user/user-tabs/user-tabs.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { CommanderOverviewComponent } from './utility/commander/commander-overview/commander-overview.component';
+import { StatsViewComponent } from './utility/stats-view/stats-view.component';
+import { SingleCommanderViewComponent } from './utility/commander/single-commander-view/single-commander-view.component';
 
 @NgModule({
   declarations: [
@@ -40,7 +43,10 @@ import { HttpClientModule } from '@angular/common/http';
     PlayersComponent,
     LifeComponent,
     OverviewTabsComponent,
-    UserTabsComponent
+    UserTabsComponent,
+    CommanderOverviewComponent,
+    StatsViewComponent,
+    SingleCommanderViewComponent
   ],
   imports: [
     BrowserModule,
@@ -50,7 +56,8 @@ import { HttpClientModule } from '@angular/common/http';
     MatInputModule,
     MatTabsModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    MatListModule
 
 
   ],

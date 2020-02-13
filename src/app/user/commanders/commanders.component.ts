@@ -2,6 +2,7 @@ import { Component, OnInit, Input } from '@angular/core';
 import { DeckstatsApiService } from '../../../services/deckstats-api/deckstats-api.service';
 import { Commander } from '../../../model/commander';
 import { ScryfallApiService } from '../../../services/scryfall-api/scryfall-api.service';
+import { PlayerService } from '../../../services/player.service';
 
 @Component({
   selector: 'app-commanders',
@@ -14,10 +15,10 @@ export class CommandersComponent implements OnInit {
   readonly LIST_FLAG = 'list';
 
   private deckstatsUrl: string;
-  commanders: Commander[] = [];
 
 
-  constructor(private deckstatsService: DeckstatsApiService, private scryFallService: ScryfallApiService) { }
+  constructor(private deckstatsService: DeckstatsApiService, private scryFallService: ScryfallApiService,
+              private playerService: PlayerService) { }
 
   ngOnInit() {
   }
@@ -33,9 +34,11 @@ export class CommandersComponent implements OnInit {
         if (commanderName !== '') {
           const commander = new Commander();
           commander.name = commanderName;
-          this.scryFallService.getImageUrl(commander.name).then((res: string) =>{ commander.imageUri = res; });
-          this.commanders.push(commander);
+          this.scryFallService.getImageUrl(commander.name).then((res: string) => {
+            console.log(res);
+            commander.imageUri = res; });
           this.deckstatsUrl = '';
+          this.playerService.getCurrentPlayer().commanders.push(commander);
         }
       });
   }

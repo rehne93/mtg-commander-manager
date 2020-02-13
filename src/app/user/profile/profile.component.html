@@ -1,1 +1,10 @@
-<p>profile works!</p>
+<mat-label>Herzlich Willkommen, {{playerService.getCurrentPlayer().name}} </mat-label>
+
+<div class="profile-form">
+    <mat-form-field>
+        <mat-label>Name</mat-label>
+        <input matInput placeholder="Profilname" [(ngModel)]="playerService.getCurrentPlayer().name">
+    </mat-form-field>
+</div>
+
+<app-commander-overview [commanders]="this.playerService.getCurrentPlayer().commanders" [showImages]="true" [width]="66" [height]="88"> </app-commander-overview>

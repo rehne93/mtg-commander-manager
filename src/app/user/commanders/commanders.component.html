@@ -4,10 +4,5 @@
 <button matButton (click)="fetch()">Fetch</button>
 <hr>
 <h4>Kommandeure</h4>
-<ul>
-    <li *ngFor="let commander of this.commanders">
-        {{commander.name}}
-        <br>
-        <img *ngIf="commander.imageUri" src="{{commander.imageUri}}">
-    </li>
-</ul>
+
+<app-commander-overview [commanders]="playerService.getCurrentPlayer().commanders" [showImages]="true"></app-commander-overview>

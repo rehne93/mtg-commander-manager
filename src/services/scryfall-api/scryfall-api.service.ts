@@ -25,7 +25,7 @@ export class ScryfallApiService {
     const url = this.SCRYFALL_CARDS_URL + encodeURIComponent(cardName);
     return new Promise((resolve) => {this.http.get(url).subscribe((result) => {
         const imageUris = result[this.IMAGE_URIS];
-        const imageUrl = imageUris[this.SMALL];
+        const imageUrl = imageUris[this.NORMAL];
         resolve(imageUrl);
     });
   });
